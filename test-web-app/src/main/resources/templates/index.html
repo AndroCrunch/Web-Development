@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<h1>List of containers available</h1>
+	<h1>Kobenhavn</h1>
+	
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Source</th>
+			<th>Destination</th>
+			<th>Operation</th>
+		</tr>
+		<tr th:each="c : ${containers}">
+			<td th:text="${c.id}"></td>
+			<td th:text="${c.source}"></td>
+			<td th:text="${c.destination}"></td>
+			<td><a th:href="@{/delete/{id}(id=${c.id})}">Del</a></td>
+		</tr>
+	</table>
+	
+	<p><a href="/add">Add container</a></p>
+</body>
+</html>
+
+
+
+
+
