@@ -9,12 +9,14 @@
 			<th>ID</th>
 			<th>Source</th>
 			<th>Destination</th>
+			<th>Company</th>
 			<th>Operation</th>
 		</tr>
 		<tr th:each="c : ${containers}">
 			<td th:text="${c.id}"></td>
 			<td th:text="${c.source}"></td>
 			<td th:text="${c.destination}"></td>
+			<td th:text="${c.company}"></td>
 			<td><a th:href="@{/delete/{id}(id=${c.id})}">Del</a></td>
 		</tr>
 	</table>

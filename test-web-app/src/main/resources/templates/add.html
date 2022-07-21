@@ -18,6 +18,13 @@
 	<strong th:if="${#fields.hasErrors('destination')}" th:errors="*{destination}"></strong>
 	<br>
 	
+	<label>
+		Container company:
+		<input type="text" name = "company" th:field="*{company}" />
+	</label>
+	<strong th:if="${#fields.hasErrors('company')}" th:errors="*{company}"></strong>
+	<br>
+	
 		<input type="submit" />
 	</form>
 </body>

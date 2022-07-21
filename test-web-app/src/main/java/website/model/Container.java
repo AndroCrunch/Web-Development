@@ -24,6 +24,10 @@ public class Container {
 	@NotBlank(message="The destination is mandatory")
 	private String destination;
 	
+	@Column
+	@NotBlank(message="The company name is mandatory")
+	private String company;
+
 	public long getId() {
 		return id;
 	}
@@ -42,6 +46,14 @@ public class Container {
 
 	public void setDestination(String destination) {
 		this.destination = destination;
+	}
+	
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
 	}
 
 }
